@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>localstorage</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            if(localStorage){
+                $(document).ready(function(){
+                    $(".save").click(function(){
+                        var firstname=$("#firstname").val();
+                        localStorage.setItem("first_name",firstname);
+                        alert("your name is saved");
+                    });
+                    $(".access").click(function(){
+                        alert("hi,"+localStorage.getItem("first_name"));
+                    });
+                });
+            }
+            else{
+                alert("sorry,your browser do not suppport localstorage");
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            firstname:<input type="text" id="firstname">
+            <button type="button" class="save">save name</button>
+            <button type="button" class="access">get name</button>
+        </form>
+    </body>
+</html>
