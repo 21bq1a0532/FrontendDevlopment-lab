@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>caluclator</title>
+        <style>
+            body{
+                background-color: antiquewhite;
+                align-items: center;
+                text-align: center;
+                margin-top: 10%;
+            }
+            h4{
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                justify-content: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            form{
+                align-items: center;
+                justify-content: center;
+            }
+            input {
+                outline: none;
+                border: none;
+                border-bottom: 2px solid silver;
+                width: 170px;
+                height: 50px;
+            }
+            table{
+                justify-content: center;
+                align-items: center;
+                background-color: dimgray;
+            }
+            td{
+                border-spacing: 0px;
+                outline: none;
+                border: none;
+            }
+            button{
+                width: 40px;
+                height: 40px;
+                /* box-shadow: 2px; */
+                border-radius: 5px;
+                background-color: dimgray;
+            }
+            button:hover{
+                border-top: 2px solid rgb(21, 181, 181);
+                border-bottom: 2px solid rgb(21, 181, 181);
+                border-left: 2px solid rgb(21, 181, 181);
+                border-right: 2px solid rgb(21, 181, 181);
+            }
+        </style>
+        <script>
+            var a;
+            function add(){
+
+            }
+            function sub(){
+
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        <table align="center" name="t1">
+            <tr>
+                <td colspan="4"><input type="text" name="display"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="display.value=''">C</button></td>
+                <td><button type="button" onclick="display.value+='%'">%</button></td>
+                <td><button type="button" onclick="display.value=display.value.toString().slice(0,-1)">del</button></td>
+                <td><button type="button" onclick="display.value+='/'">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="7" onclick="display.value+='7'">7</button></td>
+                <td><button type="button" value="8" onclick="display.value+='8'">8</button></td>
+                <td><button type="button" value="9" onclick="display.value+='9'">9</button></td>
+                <td><button type="button" value="*" onclick="display.value+='*'">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="4" onclick="display.value+='4'">4</button></td>
+                <td><button type="button" value="5" onclick="display.value+='5'">5</button></td>
+                <td><button type="button" value="6" onclick="display.value+='6'">6</button></td>
+                <td><button type="button" value="-" onclick="display.value+='-'">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" vlue="1" onclick="display.value+='1'">1</button></td>
+                <td><button type="button" value="2" onclick="display.value+='2'">2</button></td>
+                <td><button type="button" value="3" onclick="display.value+='3'">3</button></td>
+                <td><button type="button" value="+" onclick="display.value+='+'">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="00" onclick="display.value+='00'">00</button></td>
+                <td><button type="button" value="0" onclick="display.value+='0'">0</button></td>
+                <td><button type="button" value="." onclick="display.value+='.'">.</button></td>
+                <td><button type="button" value="=" onclick="display.value=eval(display.value)">=</button></td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>
